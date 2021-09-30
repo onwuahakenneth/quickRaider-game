@@ -75,7 +75,7 @@ function play(){
         audioBackground.volume = 0.05;
     let attackSucceed = false;
 
-    // rollingDiv.classList.remove('show')
+   
 
     playButton.textContent = 'Playing...';
     
