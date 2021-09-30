@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Quik Raider Game</title>
+  </head>
+  <body>
+    <header class="header-title">
+      <p class="title"><span>Quick</span> <em>R</em>aider</p>
+    </header>
+    <p class="welcome"><marquee>Welcome Back...</marquee></p>
+
+    <div class="score-bar">
+      <p class="score">Score : 0</p>
+      <p class="response-time">Time : 0.00 sec</p>
+      <div class="life">
+        <p>Life</p>
+        <div class="life-bar"><span class="progress"></span></div>
+      </div>
+    </div>
+
+    <div class="output"></div>
+
+    <ul class="scoreBoard"></ul>
+
+    <div class="roll"></div>
+
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <section class="nav-bar">
+      <ul class="links">
+        <li><a href="#" class="ranks">Ranks</a></li>
+        <li><a href="#">Help</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </section>
+
+    <button class="play-btn">PLAY</button>
+    <audio class="destroy" src="./sounds/smb_stomp.wav"></audio>
+    <audio class="lose" src="./sounds/smb_breakblock.wav"></audio>
+    <audio class="win" src="./sounds/smb_stage_clear.wav"></audio>
+    <audio class="background" src="./sounds/game-music-7408.mp3"></audio>
+
+    <footer></footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
