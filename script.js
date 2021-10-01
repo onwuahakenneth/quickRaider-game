@@ -262,7 +262,7 @@ playButton.onclick = ()=>{
     const gettingready = function(){
 
        
-            const rTime = (Math.random()*2); 
+            const rTime = (Math.random()*2 + 1); 
             x =  setInterval(play, rTime*1000);
         
         };
