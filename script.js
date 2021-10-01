@@ -195,7 +195,7 @@ function play(){
         obj.remove();
         
         //time limit to earn a point
-        if(elapsed < 0.25){
+        if(elapsed < 0.21){
             audioDestroy.play();
             audioDestroy.volume = 0.2;
             attackSucceed = true;
@@ -262,7 +262,7 @@ playButton.onclick = ()=>{
     const gettingready = function(){
 
        
-            const rTime = (Math.random()*2) + 3; 
+            const rTime = (Math.random()*2); 
             x =  setInterval(play, rTime*1000);
         
         };
@@ -320,7 +320,7 @@ function addScore(){
     //get data
     let storedScores = JSON.parse(localStorage.getItem('QuickData'));
 
-    if(score >= 10 ){
+    if(score >= 3 ){
 
         const aveSpeed = (playerRTime.reduce((acc, v)=> acc + v ,0)/playerRTime.length);
         const date = new Date().toDateString();
