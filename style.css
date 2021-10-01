@@ -17,10 +17,15 @@ body {
   transform: translate(-50%, -50%);
   color: #ddd;
   background: #000;
-  font-size: 18px;
-  padding: 15px 28px;
+  font-size: 14px;
+  padding: 15px;
   border: 1px solid steelblue;
-  border-radius: 8px;
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
   transition: all 0.3s linear;
 }
@@ -110,9 +115,9 @@ body {
 
 .score-bar {
   position: absolute;
-  background: #888;
-  width: 150px;
-  margin: 5px;
+  background: inherit;
+  width: 110px;
+  margin: 3px 1px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -129,13 +134,16 @@ body {
 .score,
 .response-time,
 .life {
-  width: 100%;
-  padding: 2px 5px;
+  width: 60%;
+  padding: 0px 5px;
   border-radius: 8px;
   /* margin: 3px; */
-  color: #363;
+  color: rgb(3, 3, 80);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 9.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .score {
@@ -168,8 +176,9 @@ body {
 .life .life-bar {
   position: relative;
   width: 65%;
-  height: 10px;
-  background: #999;
+  height: 5px;
+  margin-left: 3px;
+  background: inherit;
   border-radius: 8px;
 }
 
@@ -180,7 +189,7 @@ body {
   height: 100%;
   width: 100%;
   transition: all 1.4s linear;
-  background: green;
+  background:lime;
 }
 
 .output {

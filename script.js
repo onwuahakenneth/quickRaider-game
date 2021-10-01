@@ -55,7 +55,7 @@ function getPos(){
 //game initial variables
 let score = 0;
 let attempts = 0;
-const lifeColors = ['darkorange', 'red', 'transparent'];
+const lifeColors = ['green', 'orange', 'darkorange', 'red', 'transparent'];
 let playerRTime = [];
 let x;
 
@@ -119,7 +119,7 @@ function play(){
 
     let time = new Date().getTime();
     body.append(obj);
-    const colors = ['lavender', 'lightgreen', 'lightcyan', 'lightpurple', 'lightpink', 'lightcoral', 'lightsalmon'];
+    const colors = ['lavender', 'lightcyan', 'lightpurple', 'lightpink', 'lightcoral', 'lightsalmon'];
     body.style.background = `${colors.sort((a, b)=> 0.5 - Math.random())[0]}`;
     
     
@@ -143,10 +143,10 @@ function play(){
 
             //update Life
 
-            lifeProgress.style.width = `${((3 - attempts)/3)*100}%`;
+            lifeProgress.style.width = `${((5 - attempts)/5)*100}%`;
             lifeProgress.style.background = lifeColors[attempts - 1];            
 
-            if(attempts == 3){
+            if(attempts == 5){
               audioLose.play();
                
                 scoreTable.classList.toggle('show');
@@ -155,7 +155,7 @@ function play(){
                 audioLose.volume = 0.2;
                 
 
-            if(score >= 8){
+            if(score >= 3){
                 outputMessage.textContent = `{Score: ${score} } Nice Try...`;
             }else{
                 outputMessage.textContent = `{Score: ${score} } Ooops...`;
@@ -184,7 +184,7 @@ function play(){
         }
     };
     
-    setTimeout(objectMissed, 1500);
+    setTimeout(objectMissed, 1100);
     
     
     
@@ -195,7 +195,7 @@ function play(){
         obj.remove();
         
         //time limit to earn a point
-        if(elapsed < 0.33){
+        if(elapsed < 0.25){
             audioDestroy.play();
             audioDestroy.volume = 0.2;
             attackSucceed = true;
@@ -204,7 +204,7 @@ function play(){
         }
         
         displayInfo.textContent = ` Score : ${score}`;
-        responseTime.textContent = `Time : ${(elapsed*10).toFixed(2)} sec`;
+        responseTime.textContent = `Time  :${(elapsed*10).toFixed(2)} `;
         if(score == 100){
             
             //stop the game loop
@@ -262,7 +262,7 @@ playButton.onclick = ()=>{
     const gettingready = function(){
 
        
-            const rTime = (Math.random()*2) + 4; 
+            const rTime = (Math.random()*2) + 3; 
             x =  setInterval(play, rTime*1000);
         
         };
